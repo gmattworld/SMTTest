@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Solution1
 {
@@ -6,9 +7,8 @@ namespace Solution1
     {
         static void Main(string[] args)
         {
-            string[] animals = { "cow", "dog", "cat", "pig", "duck" };
-
-            if (animals == null || animals.Length < 1)
+            var animals = GetAnimals();
+            if (animals == null || animals.Count < 1)
             {
                 Console.WriteLine("No animal in Old MacDonald farm");
                 Console.ReadKey();
@@ -17,98 +17,78 @@ namespace Solution1
 
             foreach (var animal in animals)
             {
-                IAnimal sound = null;
-                switch (animal)
-                {
-                    case "cow":
-                        sound = new Cow();
-                        break;
-
-                    case "dog":
-                        sound = new Dog();
-                        break;
-
-                    case "cat":
-                        sound = new Cat();
-                        break;
-
-                    case "pig":
-                        sound = new Pig();
-                        break;
-
-                    case "duck":
-                        sound = new Duck();
-                        break;
-                }
-
-                if (sound != null)
-                    PrintMessage(animal, sound.Cry());
+                PrintMessage(animal);
             }
 
             Console.ReadKey();
         }
 
-        static void PrintMessage(string name, string sound)
+        /// <summary>
+        /// Print message to console
+        /// </summary>
+        /// <param name="animal"></param>
+        static void PrintMessage(Animal animal)
         {
             var poem = $@"
                 Old MacDonald had a farm, E I E I O,
-                And on his farm he had a {name}, E I E I O.
-                With a {sound} {sound} here and a {sound} {sound} there,
-                Here a {sound}, there a {sound}, ev'rywhere a {sound} {sound}.
+                And on his farm he had a {animal.Name}, E I E I O.
+                With a {animal.Sound} {animal.Sound} here and a {animal.Sound} {animal.Sound} there,
+                Here a {animal.Sound}, there a {animal.Sound}, ev'rywhere a {animal.Sound} {animal.Sound}.
                 Old MacDonald had a farm, E I E I O.
             ";
 
             Console.WriteLine(poem);
             Console.WriteLine("==========================================================================================");
         }
-    }
 
-    class Animal : IAnimal
-    {
-        public virtual string Cry()
+
+        /// <summary>
+        /// Simulate getting user from any source
+        /// </summary>
+        /// <returns></returns>
+        static List<Animal> GetAnimals()
         {
-            return "cry";
+            var animals = new List<Animal>();
+
+            animals.Add(new Animal
+            {
+                Name = "cow",
+                Sound = "moo"
+            });
+
+            animals.Add(new Animal
+            {
+                Name = "dog",
+                Sound = "Woof"
+            });
+
+            animals.Add(new Animal
+            {
+                Name = "cat",
+                Sound = "meows"
+            });
+
+            animals.Add(new Animal
+            {
+                Name = "pig",
+                Sound = "oink"
+            });
+
+            animals.Add(new Animal
+            {
+                Name = "duck",
+                Sound = "quack"
+            });
+
+            return animals;
         }
     }
 
-    class Cow : Animal
+    class Animal
     {
-        public override string Cry()
-        {
-            return "moo";
-        }
-    }
-
-    class Dog : Animal
-    {
-        public override string Cry()
-        {
-            return "Woof";
-        }
-    }
-
-    class Cat : Animal
-    {
-        public override string Cry()
-        {
-            return "meows";
-        }
-    }
-
-    class Pig : Animal
-    {
-        public override string Cry()
-        {
-            return "oink";
-        }
-    }
-
-    class Duck : Animal
-    {
-        public override string Cry()
-        {
-            return "quack";
-        }
+        public string Name { get; set; }
+        public string Sound { get; set; }
     }
 }
+
 
