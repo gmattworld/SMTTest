@@ -1,0 +1,13 @@
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/bin/Debug/netcoreapp3.1/Solution1.deps.json
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/bin/Debug/netcoreapp3.1/Solution1.runtimeconfig.json
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/bin/Debug/netcoreapp3.1/Solution1.runtimeconfig.dev.json
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/bin/Debug/netcoreapp3.1/Solution1.dll
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/bin/Debug/netcoreapp3.1/Solution1.pdb
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/obj/Debug/netcoreapp3.1/Solution1.csproj.AssemblyReference.cache
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/obj/Debug/netcoreapp3.1/Solution1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/obj/Debug/netcoreapp3.1/Solution1.AssemblyInfoInputs.cache
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/obj/Debug/netcoreapp3.1/Solution1.AssemblyInfo.cs
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/obj/Debug/netcoreapp3.1/Solution1.csproj.CoreCompileInputs.cache
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/obj/Debug/netcoreapp3.1/Solution1.dll
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/obj/Debug/netcoreapp3.1/Solution1.pdb
+/Users/Olugbenga.Afolabi/Projects/SMTTest/Solution1/obj/Debug/netcoreapp3.1/Solution1.genruntimeconfig.cache
